@@ -25,11 +25,11 @@
       "required": true
     },
     "StartTime": {
-      "type": "time",
+      "type": "datetime",
       "required": true
     },
     "EndTime": {
-      "type": "time"
+      "type": "datetime"
     },
     "Important": {
       "type": "boolean"

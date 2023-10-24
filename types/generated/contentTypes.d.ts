@@ -377,8 +377,8 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Text & Attribute.Required;
     Location: Attribute.String & Attribute.Required;
-    StartTime: Attribute.Time & Attribute.Required;
-    EndTime: Attribute.Time;
+    StartTime: Attribute.DateTime & Attribute.Required;
+    EndTime: Attribute.DateTime;
     Important: Attribute.Boolean;
     Host: Attribute.Enumeration<['mcss', 'gdsc', 'cssc', 'utmist', 'wisc']> &
       Attribute.Required;
@@ -394,13 +394,14 @@ export interface ApiEventEvent extends Schema.CollectionType {
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-    'api::event.event',
-    'oneToOne',
-    'admin::user'
+      'api::event.event',
+      'oneToOne',
+      'admin::user'
     > &
       Attribute.Private;
   };
 }
+
 export interface ApiPhotoListPhotoList extends Schema.CollectionType {
   collectionName: 'photo_lists';
   info: {

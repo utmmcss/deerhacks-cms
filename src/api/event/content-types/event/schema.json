@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "StartTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "EndTime": {
+      "type": "datetime"
+    },
+    "Important": {
+      "type": "boolean"
+    },
+    "Host": {
+      "type": "enumeration",
+      "enum": [
+        "mcss",
+        "gdsc",
+        "cssc",
+        "utmist",
+        "wisc"
+      ],
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "activity",
+        "workshop",
+        "other"
+      ],
+      "required": true
+    }
+  }
+}

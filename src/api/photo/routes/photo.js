@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * photo-list router
+ * photo router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::photo-list.photo-list');
+module.exports = createCoreRouter('api::photo.photo');

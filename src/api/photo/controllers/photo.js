@@ -6,7 +6,7 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::photo-list.photo-list', ({ strapi }) => ({
+module.exports = createCoreController('api::photo.photo', ({ strapi }) => ({
     async find(ctx) {
       var { data, meta } = await super.find(ctx);
 
@@ -39,3 +39,5 @@ module.exports = createCoreController('api::photo-list.photo-list', ({ strapi })
         return response;
       }
   }));
+
+

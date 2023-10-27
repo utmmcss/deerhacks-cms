@@ -1,5 +1,5 @@
 {
-  "/photo-lists": {
+  "/photos": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListListResponse"
+                "$ref": "#/components/schemas/PhotoListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Photo-list"
+        "Photo"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/photo-lists"
+      "operationId": "get/photos"
     },
     "post": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListResponse"
+                "$ref": "#/components/schemas/PhotoResponse"
               }
             }
           }
@@ -235,23 +235,23 @@
         }
       },
       "tags": [
-        "Photo-list"
+        "Photo"
       ],
       "parameters": [],
-      "operationId": "post/photo-lists",
+      "operationId": "post/photos",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PhotoListRequest"
+              "$ref": "#/components/schemas/PhotoRequest"
             }
           }
         }
       }
     }
   },
-  "/photo-lists/{id}": {
+  "/photos/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -259,7 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListResponse"
+                "$ref": "#/components/schemas/PhotoResponse"
               }
             }
           }
@@ -316,7 +316,7 @@
         }
       },
       "tags": [
-        "Photo-list"
+        "Photo"
       ],
       "parameters": [
         {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/photo-lists/{id}"
+      "operationId": "get/photos/{id}"
     },
     "put": {
       "responses": {
@@ -339,7 +339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListResponse"
+                "$ref": "#/components/schemas/PhotoResponse"
               }
             }
           }
@@ -396,7 +396,7 @@
         }
       },
       "tags": [
-        "Photo-list"
+        "Photo"
       ],
       "parameters": [
         {
@@ -410,13 +410,13 @@
           }
         }
       ],
-      "operationId": "put/photo-lists/{id}",
+      "operationId": "put/photos/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PhotoListRequest"
+              "$ref": "#/components/schemas/PhotoRequest"
             }
           }
         }
@@ -487,7 +487,7 @@
         }
       },
       "tags": [
-        "Photo-list"
+        "Photo"
       ],
       "parameters": [
         {
@@ -501,7 +501,7 @@
           }
         }
       ],
-      "operationId": "delete/photo-lists/{id}"
+      "operationId": "delete/photos/{id}"
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-24T14:39:32.711Z"
+    "x-generation-date": "2023-10-27T21:57:22.317Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -562,7 +562,7 @@
           }
         }
       },
-      "PhotoListRequest": {
+      "PhotoRequest": {
         "type": "object",
         "required": [
           "data"
@@ -570,8 +570,7 @@
         "properties": {
           "data": {
             "required": [
-              "Img",
-              "Alt"
+              "Img"
             ],
             "type": "object",
             "properties": {
@@ -593,24 +592,24 @@
           }
         }
       },
-      "PhotoListListResponseDataItem": {
+      "PhotoListResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "attributes": {
-            "$ref": "#/components/schemas/PhotoList"
+            "$ref": "#/components/schemas/Photo"
           }
         }
       },
-      "PhotoListListResponse": {
+      "PhotoListResponse": {
         "type": "object",
         "properties": {
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PhotoListListResponseDataItem"
+              "$ref": "#/components/schemas/PhotoListResponseDataItem"
             }
           },
           "meta": {
@@ -639,11 +638,10 @@
           }
         }
       },
-      "PhotoList": {
+      "Photo": {
         "type": "object",
         "required": [
-          "Img",
-          "Alt"
+          "Img"
         ],
         "properties": {
           "Img": {
@@ -1319,22 +1317,22 @@
           }
         }
       },
-      "PhotoListResponseDataObject": {
+      "PhotoResponseDataObject": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "attributes": {
-            "$ref": "#/components/schemas/PhotoList"
+            "$ref": "#/components/schemas/Photo"
           }
         }
       },
-      "PhotoListResponse": {
+      "PhotoResponse": {
         "type": "object",
         "properties": {
           "data": {
-            "$ref": "#/components/schemas/PhotoListResponseDataObject"
+            "$ref": "#/components/schemas/PhotoResponseDataObject"
           },
           "meta": {
             "type": "object"
@@ -2054,7 +2052,7 @@
         "operationId": "delete/events/{id}"
       }
     },
-    "/photo-lists": {
+    "/photos": {
       "get": {
         "responses": {
           "200": {
@@ -2062,7 +2060,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PhotoListListResponse"
+                  "$ref": "#/components/schemas/PhotoListResponse"
                 }
               }
             }
@@ -2119,7 +2117,7 @@
           }
         },
         "tags": [
-          "Photo-list"
+          "Photo"
         ],
         "parameters": [
           {
@@ -2224,7 +2222,7 @@
             }
           }
         ],
-        "operationId": "get/photo-lists"
+        "operationId": "get/photos"
       },
       "post": {
         "responses": {
@@ -2233,7 +2231,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PhotoListResponse"
+                  "$ref": "#/components/schemas/PhotoResponse"
                 }
               }
             }
@@ -2290,23 +2288,23 @@
           }
         },
         "tags": [
-          "Photo-list"
+          "Photo"
         ],
         "parameters": [],
-        "operationId": "post/photo-lists",
+        "operationId": "post/photos",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListRequest"
+                "$ref": "#/components/schemas/PhotoRequest"
               }
             }
           }
         }
       }
     },
-    "/photo-lists/{id}": {
+    "/photos/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -2314,7 +2312,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PhotoListResponse"
+                  "$ref": "#/components/schemas/PhotoResponse"
                 }
               }
             }
@@ -2371,7 +2369,7 @@
           }
         },
         "tags": [
-          "Photo-list"
+          "Photo"
         ],
         "parameters": [
           {
@@ -2385,7 +2383,7 @@
             }
           }
         ],
-        "operationId": "get/photo-lists/{id}"
+        "operationId": "get/photos/{id}"
       },
       "put": {
         "responses": {
@@ -2394,7 +2392,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PhotoListResponse"
+                  "$ref": "#/components/schemas/PhotoResponse"
                 }
               }
             }
@@ -2451,7 +2449,7 @@
           }
         },
         "tags": [
-          "Photo-list"
+          "Photo"
         ],
         "parameters": [
           {
@@ -2465,13 +2463,13 @@
             }
           }
         ],
-        "operationId": "put/photo-lists/{id}",
+        "operationId": "put/photos/{id}",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PhotoListRequest"
+                "$ref": "#/components/schemas/PhotoRequest"
               }
             }
           }
@@ -2542,7 +2540,7 @@
           }
         },
         "tags": [
-          "Photo-list"
+          "Photo"
         ],
         "parameters": [
           {
@@ -2556,7 +2554,7 @@
             }
           }
         ],
-        "operationId": "delete/photo-lists/{id}"
+        "operationId": "delete/photos/{id}"
       }
     },
     "/upload": {

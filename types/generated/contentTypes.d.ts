@@ -402,31 +402,30 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
-export interface ApiPhotoListPhotoList extends Schema.CollectionType {
-  collectionName: 'photo_lists';
+export interface ApiPhotoPhoto extends Schema.CollectionType {
+  collectionName: 'photos';
   info: {
-    singularName: 'photo-list';
-    pluralName: 'photo-lists';
-    displayName: 'Photo List';
-    description: '';
+    singularName: 'photo';
+    pluralName: 'photos';
+    displayName: 'Photo';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Img: Attribute.Media & Attribute.Required;
-    Alt: Attribute.String & Attribute.Required;
+    Alt: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::photo-list.photo-list',
+      'api::photo.photo',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::photo-list.photo-list',
+      'api::photo.photo',
       'oneToOne',
       'admin::user'
     > &
@@ -760,7 +759,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::event.event': ApiEventEvent;
-      'api::photo-list.photo-list': ApiPhotoListPhotoList;
+      'api::photo.photo': ApiPhotoPhoto;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;

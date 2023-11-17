@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-10-27T21:57:22.317Z"
+    "x-generation-date": "2023-11-17T22:38:02.210Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -98,6 +98,8 @@
               "Description",
               "Location",
               "StartTime",
+              "EndTime",
+              "Important",
               "Host",
               "Type"
             ],
@@ -138,6 +140,8 @@
                 "enum": [
                   "activity",
                   "workshop",
+                  "competition",
+                  "logistics",
                   "other"
                 ]
               }
@@ -198,6 +202,8 @@
           "Description",
           "Location",
           "StartTime",
+          "EndTime",
+          "Important",
           "Host",
           "Type"
         ],
@@ -237,6 +243,8 @@
             "enum": [
               "activity",
               "workshop",
+              "competition",
+              "logistics",
               "other"
             ]
           },
@@ -570,7 +578,8 @@
         "properties": {
           "data": {
             "required": [
-              "Img"
+              "Img",
+              "Alt"
             ],
             "type": "object",
             "properties": {
@@ -641,7 +650,8 @@
       "Photo": {
         "type": "object",
         "required": [
-          "Img"
+          "Img",
+          "Alt"
         ],
         "properties": {
           "Img": {

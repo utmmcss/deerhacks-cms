@@ -378,11 +378,13 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Description: Attribute.Text & Attribute.Required;
     Location: Attribute.String & Attribute.Required;
     StartTime: Attribute.DateTime & Attribute.Required;
-    EndTime: Attribute.DateTime;
-    Important: Attribute.Boolean;
+    EndTime: Attribute.DateTime & Attribute.Required;
+    Important: Attribute.Boolean & Attribute.Required;
     Host: Attribute.Enumeration<['mcss', 'gdsc', 'cssc', 'utmist', 'wisc']> &
       Attribute.Required;
-    Type: Attribute.Enumeration<['activity', 'workshop', 'other']> &
+    Type: Attribute.Enumeration<
+      ['activity', 'workshop', 'competition', 'logistics', 'other']
+    > &
       Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -408,13 +410,14 @@ export interface ApiPhotoPhoto extends Schema.CollectionType {
     singularName: 'photo';
     pluralName: 'photos';
     displayName: 'Photo';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Img: Attribute.Media & Attribute.Required;
-    Alt: Attribute.String;
+    Alt: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -29,10 +29,12 @@
       "required": true
     },
     "EndTime": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "Important": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     },
     "Host": {
       "type": "enumeration",
@@ -50,6 +52,8 @@
       "enum": [
         "activity",
         "workshop",
+        "competition",
+        "logistics",
         "other"
       ],
       "required": true

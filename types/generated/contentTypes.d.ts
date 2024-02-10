@@ -376,16 +376,32 @@ export interface ApiEventEvent extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String & Attribute.Required;
     Description: Attribute.Text & Attribute.Required;
-    Location: Attribute.String & Attribute.Required;
+    Location: Attribute.String;
     StartTime: Attribute.DateTime & Attribute.Required;
-    EndTime: Attribute.DateTime & Attribute.Required;
+    EndTime: Attribute.DateTime;
     Important: Attribute.Boolean & Attribute.Required;
-    Host: Attribute.Enumeration<['mcss', 'gdsc', 'cssc', 'utmist', 'wisc']> &
-      Attribute.Required;
-    Type: Attribute.Enumeration<
-      ['activity', 'workshop', 'competition', 'logistics', 'other']
+    Host: Attribute.Enumeration<
+      [
+        'deerhacks',
+        'mcss',
+        'utmRobotics',
+        'gdsc',
+        'cssc',
+        'utmsam',
+        'mlh',
+        'guidewire',
+        'inworldAi',
+        'uber',
+        'amd',
+        'thirstea'
+      ]
     > &
       Attribute.Required;
+    Type: Attribute.Enumeration<
+      ['activity', 'workshop', 'competition', 'logistics', 'food', 'other']
+    > &
+      Attribute.Required;
+    Presenter: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

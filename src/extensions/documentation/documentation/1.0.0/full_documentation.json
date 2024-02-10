@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-11-17T22:38:02.210Z"
+    "x-generation-date": "2024-02-10T00:28:49.087Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -96,9 +96,7 @@
             "required": [
               "Title",
               "Description",
-              "Location",
               "StartTime",
-              "EndTime",
               "Important",
               "Host",
               "Type"
@@ -128,11 +126,18 @@
               "Host": {
                 "type": "string",
                 "enum": [
+                  "deerhacks",
                   "mcss",
+                  "utmRobotics",
                   "gdsc",
                   "cssc",
-                  "utmist",
-                  "wisc"
+                  "utmsam",
+                  "mlh",
+                  "guidewire",
+                  "inworldAi",
+                  "uber",
+                  "amd",
+                  "thirstea"
                 ]
               },
               "Type": {
@@ -142,8 +147,12 @@
                   "workshop",
                   "competition",
                   "logistics",
+                  "food",
                   "other"
                 ]
+              },
+              "Presenter": {
+                "type": "string"
               }
             }
           }
@@ -200,9 +209,7 @@
         "required": [
           "Title",
           "Description",
-          "Location",
           "StartTime",
-          "EndTime",
           "Important",
           "Host",
           "Type"
@@ -231,11 +238,18 @@
           "Host": {
             "type": "string",
             "enum": [
+              "deerhacks",
               "mcss",
+              "utmRobotics",
               "gdsc",
               "cssc",
-              "utmist",
-              "wisc"
+              "utmsam",
+              "mlh",
+              "guidewire",
+              "inworldAi",
+              "uber",
+              "amd",
+              "thirstea"
             ]
           },
           "Type": {
@@ -245,8 +259,12 @@
               "workshop",
               "competition",
               "logistics",
+              "food",
               "other"
             ]
+          },
+          "Presenter": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

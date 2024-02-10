@@ -22,7 +22,7 @@
     },
     "Location": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "StartTime": {
       "type": "datetime",
@@ -30,7 +30,7 @@
     },
     "EndTime": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "Important": {
       "type": "boolean",
@@ -39,11 +39,18 @@
     "Host": {
       "type": "enumeration",
       "enum": [
+        "deerhacks",
         "mcss",
+        "utmRobotics",
         "gdsc",
         "cssc",
-        "utmist",
-        "wisc"
+        "utmsam",
+        "mlh",
+        "guidewire",
+        "inworldAi",
+        "uber",
+        "amd",
+        "thirstea"
       ],
       "required": true
     },
@@ -54,9 +61,13 @@
         "workshop",
         "competition",
         "logistics",
+        "food",
         "other"
       ],
       "required": true
+    },
+    "Presenter": {
+      "type": "string"
     }
   }
 }

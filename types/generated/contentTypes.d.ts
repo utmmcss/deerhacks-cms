@@ -393,7 +393,8 @@ export interface ApiEventEvent extends Schema.CollectionType {
         'inworldAi',
         'uber',
         'amd',
-        'thirstea'
+        'thirstea',
+        'esports'
       ]
     > &
       Attribute.Required;
